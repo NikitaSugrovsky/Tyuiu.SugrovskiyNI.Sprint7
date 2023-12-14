@@ -94,12 +94,22 @@
       <Project>{5ba87971-fa6f-4795-8ec7-58c828acaf60}</Project>
       <Name>Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Lib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Test\Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Test.csproj">
+      <Project>{23f1f2ce-f72e-4393-9d4e-07b10069c241}</Project>
+      <Name>Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Test</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1566935-622863-siryak_square_small.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\5vfObP-iu7E.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cog.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
