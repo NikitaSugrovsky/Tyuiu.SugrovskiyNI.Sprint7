@@ -30,17 +30,33 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.buttonHelp_SNI_Click = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView_SNI = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button_doctor_SNI = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.button2 = new System.Windows.Forms.Button();
-            this.buttonHelp_SNI_Click = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button_doctor1_SNI = new System.Windows.Forms.Button();
+            this.button_doctor_2_SNI = new System.Windows.Forms.Button();
+            this.button_doctor_3_SNI = new System.Windows.Forms.Button();
+            this.button_doctor_4_SNI = new System.Windows.Forms.Button();
+            this.comboBox_SNI = new System.Windows.Forms.ComboBox();
+            this.button_Search_SNI = new System.Windows.Forms.Button();
+            this.textBoxSearch_SNI = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonSave_1_SNI = new System.Windows.Forms.Button();
+            this.buttonSave_SNI = new System.Windows.Forms.Button();
+            this.buttonSave_2_SNI = new System.Windows.Forms.Button();
+            this.buttonSave_4_SNI = new System.Windows.Forms.Button();
+            this.buttonSave_3_SNI = new System.Windows.Forms.Button();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.button_updatе_SNI = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,44 +69,8 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1316, 51);
+            this.panel1.Size = new System.Drawing.Size(1356, 51);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Какой именно врач вас интересует";
-            // 
-            // dataGridView_SNI
-            // 
-            this.dataGridView_SNI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_SNI.Location = new System.Drawing.Point(710, 75);
-            this.dataGridView_SNI.Name = "dataGridView_SNI";
-            this.dataGridView_SNI.RowHeadersWidth = 51;
-            this.dataGridView_SNI.RowTemplate.Height = 24;
-            this.dataGridView_SNI.Size = new System.Drawing.Size(570, 435);
-            this.dataGridView_SNI.TabIndex = 1;
-            this.dataGridView_SNI.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SNI_CellContentClick);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(17, 75);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(245, 34);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Сиряк Данил Сергеевич";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // button2
             // 
@@ -114,16 +94,207 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.buttonHelp_SNI_Click.UseVisualStyleBackColor = false;
             this.buttonHelp_SNI_Click.Click += new System.EventHandler(this.buttonHelp_SNI_Click_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(330, 26);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Какой именно врач вас интересует";
+            // 
+            // dataGridView_SNI
+            // 
+            this.dataGridView_SNI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_SNI.Location = new System.Drawing.Point(456, 124);
+            this.dataGridView_SNI.Name = "dataGridView_SNI";
+            this.dataGridView_SNI.RowHeadersWidth = 51;
+            this.dataGridView_SNI.RowTemplate.Height = 24;
+            this.dataGridView_SNI.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView_SNI.Size = new System.Drawing.Size(888, 415);
+            this.dataGridView_SNI.TabIndex = 1;
+            this.dataGridView_SNI.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SNI_CellContentClick);
+            // 
+            // button_doctor_SNI
+            // 
+            this.button_doctor_SNI.Location = new System.Drawing.Point(5, 136);
+            this.button_doctor_SNI.Name = "button_doctor_SNI";
+            this.button_doctor_SNI.Size = new System.Drawing.Size(222, 40);
+            this.button_doctor_SNI.TabIndex = 2;
+            this.button_doctor_SNI.Text = "Сиряк Данил Сергеевич";
+            this.button_doctor_SNI.UseVisualStyleBackColor = true;
+            this.button_doctor_SNI.Click += new System.EventHandler(this.button_doctor_SNI_Click);
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button_doctor1_SNI
+            // 
+            this.button_doctor1_SNI.Location = new System.Drawing.Point(6, 50);
+            this.button_doctor1_SNI.Name = "button_doctor1_SNI";
+            this.button_doctor1_SNI.Size = new System.Drawing.Size(222, 40);
+            this.button_doctor1_SNI.TabIndex = 4;
+            this.button_doctor1_SNI.Text = "Дьяков Лаврентий Алексеевич";
+            this.button_doctor1_SNI.UseVisualStyleBackColor = true;
+            this.button_doctor1_SNI.Click += new System.EventHandler(this.button_doctor1_SNI_Click);
+            // 
+            // button_doctor_2_SNI
+            // 
+            this.button_doctor_2_SNI.Location = new System.Drawing.Point(5, 236);
+            this.button_doctor_2_SNI.Name = "button_doctor_2_SNI";
+            this.button_doctor_2_SNI.Size = new System.Drawing.Size(222, 40);
+            this.button_doctor_2_SNI.TabIndex = 5;
+            this.button_doctor_2_SNI.Text = "Туляков Станислав Сергеевич";
+            this.button_doctor_2_SNI.UseVisualStyleBackColor = true;
+            this.button_doctor_2_SNI.Click += new System.EventHandler(this.button_doctor_2_SNI_Click);
+            // 
+            // button_doctor_3_SNI
+            // 
+            this.button_doctor_3_SNI.Location = new System.Drawing.Point(6, 332);
+            this.button_doctor_3_SNI.Name = "button_doctor_3_SNI";
+            this.button_doctor_3_SNI.Size = new System.Drawing.Size(222, 40);
+            this.button_doctor_3_SNI.TabIndex = 6;
+            this.button_doctor_3_SNI.Text = "Сагитов Рашид Шайхуллович";
+            this.button_doctor_3_SNI.UseVisualStyleBackColor = true;
+            this.button_doctor_3_SNI.Click += new System.EventHandler(this.button_doctor_3_SNI_Click);
+            // 
+            // button_doctor_4_SNI
+            // 
+            this.button_doctor_4_SNI.Location = new System.Drawing.Point(6, 442);
+            this.button_doctor_4_SNI.Name = "button_doctor_4_SNI";
+            this.button_doctor_4_SNI.Size = new System.Drawing.Size(222, 40);
+            this.button_doctor_4_SNI.TabIndex = 7;
+            this.button_doctor_4_SNI.Text = "Некрасова Оксана Викторовна";
+            this.button_doctor_4_SNI.UseVisualStyleBackColor = true;
+            this.button_doctor_4_SNI.Click += new System.EventHandler(this.button_doctor_4_SNI_Click);
+            // 
+            // comboBox_SNI
+            // 
+            this.comboBox_SNI.FormattingEnabled = true;
+            this.comboBox_SNI.Location = new System.Drawing.Point(712, 57);
+            this.comboBox_SNI.Name = "comboBox_SNI";
+            this.comboBox_SNI.Size = new System.Drawing.Size(592, 24);
+            this.comboBox_SNI.TabIndex = 21;
+            this.comboBox_SNI.SelectedIndexChanged += new System.EventHandler(this.comboBox_SNI_SelectedIndexChanged);
+            this.comboBox_SNI.Click += new System.EventHandler(this.button_Search_SNI_Click);
+            // 
+            // button_Search_SNI
+            // 
+            this.button_Search_SNI.Location = new System.Drawing.Point(1219, 95);
+            this.button_Search_SNI.Name = "button_Search_SNI";
+            this.button_Search_SNI.Size = new System.Drawing.Size(75, 23);
+            this.button_Search_SNI.TabIndex = 23;
+            this.button_Search_SNI.Text = "Поиск";
+            this.button_Search_SNI.UseVisualStyleBackColor = true;
+            this.button_Search_SNI.Click += new System.EventHandler(this.button_Search_SNI_Click);
+            // 
+            // textBoxSearch_SNI
+            // 
+            this.textBoxSearch_SNI.Location = new System.Drawing.Point(587, 95);
+            this.textBoxSearch_SNI.Name = "textBoxSearch_SNI";
+            this.textBoxSearch_SNI.Size = new System.Drawing.Size(468, 22);
+            this.textBoxSearch_SNI.TabIndex = 24;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button_updatе_SNI);
+            this.groupBox1.Controls.Add(this.button_doctor1_SNI);
+            this.groupBox1.Controls.Add(this.buttonSave_1_SNI);
+            this.groupBox1.Controls.Add(this.button_doctor_SNI);
+            this.groupBox1.Controls.Add(this.buttonSave_SNI);
+            this.groupBox1.Controls.Add(this.button_doctor_2_SNI);
+            this.groupBox1.Controls.Add(this.buttonSave_2_SNI);
+            this.groupBox1.Controls.Add(this.buttonSave_4_SNI);
+            this.groupBox1.Controls.Add(this.button_doctor_3_SNI);
+            this.groupBox1.Controls.Add(this.buttonSave_3_SNI);
+            this.groupBox1.Controls.Add(this.button_doctor_4_SNI);
+            this.groupBox1.Location = new System.Drawing.Point(12, 57);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(438, 545);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Врачи";
+            // 
+            // buttonSave_1_SNI
+            // 
+            this.buttonSave_1_SNI.Image = global::Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Properties.Resources.page_white_go;
+            this.buttonSave_1_SNI.Location = new System.Drawing.Point(234, 50);
+            this.buttonSave_1_SNI.Name = "buttonSave_1_SNI";
+            this.buttonSave_1_SNI.Size = new System.Drawing.Size(44, 40);
+            this.buttonSave_1_SNI.TabIndex = 11;
+            this.buttonSave_1_SNI.UseVisualStyleBackColor = true;
+            this.buttonSave_1_SNI.Click += new System.EventHandler(this.buttonSave_1_SNI_Click);
+            // 
+            // buttonSave_SNI
+            // 
+            this.buttonSave_SNI.Image = global::Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Properties.Resources.page_white_go;
+            this.buttonSave_SNI.Location = new System.Drawing.Point(234, 136);
+            this.buttonSave_SNI.Name = "buttonSave_SNI";
+            this.buttonSave_SNI.Size = new System.Drawing.Size(44, 40);
+            this.buttonSave_SNI.TabIndex = 3;
+            this.buttonSave_SNI.UseVisualStyleBackColor = true;
+            this.buttonSave_SNI.Click += new System.EventHandler(this.buttonSave_SNI_Click);
+            // 
+            // buttonSave_2_SNI
+            // 
+            this.buttonSave_2_SNI.Image = global::Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Properties.Resources.page_white_go;
+            this.buttonSave_2_SNI.Location = new System.Drawing.Point(234, 236);
+            this.buttonSave_2_SNI.Name = "buttonSave_2_SNI";
+            this.buttonSave_2_SNI.Size = new System.Drawing.Size(44, 40);
+            this.buttonSave_2_SNI.TabIndex = 12;
+            this.buttonSave_2_SNI.UseVisualStyleBackColor = true;
+            this.buttonSave_2_SNI.Click += new System.EventHandler(this.buttonSave_2_SNI_Click);
+            // 
+            // buttonSave_4_SNI
+            // 
+            this.buttonSave_4_SNI.Image = global::Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Properties.Resources.page_white_go;
+            this.buttonSave_4_SNI.Location = new System.Drawing.Point(234, 442);
+            this.buttonSave_4_SNI.Name = "buttonSave_4_SNI";
+            this.buttonSave_4_SNI.Size = new System.Drawing.Size(44, 40);
+            this.buttonSave_4_SNI.TabIndex = 14;
+            this.buttonSave_4_SNI.UseVisualStyleBackColor = true;
+            this.buttonSave_4_SNI.Click += new System.EventHandler(this.buttonSave_4_SNI_Click);
+            // 
+            // buttonSave_3_SNI
+            // 
+            this.buttonSave_3_SNI.Image = global::Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Properties.Resources.page_white_go;
+            this.buttonSave_3_SNI.Location = new System.Drawing.Point(234, 332);
+            this.buttonSave_3_SNI.Name = "buttonSave_3_SNI";
+            this.buttonSave_3_SNI.Size = new System.Drawing.Size(44, 40);
+            this.buttonSave_3_SNI.TabIndex = 13;
+            this.buttonSave_3_SNI.UseVisualStyleBackColor = true;
+            this.buttonSave_3_SNI.Click += new System.EventHandler(this.buttonSave_3_SNI_Click);
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            // 
+            // button_updatе_SNI
+            // 
+            this.button_updatе_SNI.Image = global::Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Properties.Resources.pencil;
+            this.button_updatе_SNI.Location = new System.Drawing.Point(381, 493);
+            this.button_updatе_SNI.Name = "button_updatе_SNI";
+            this.button_updatе_SNI.Size = new System.Drawing.Size(51, 46);
+            this.button_updatе_SNI.TabIndex = 26;
+            this.button_updatе_SNI.UseVisualStyleBackColor = true;
+            this.button_updatе_SNI.Click += new System.EventHandler(this.button_updatе_SNI_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1316, 614);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(1356, 614);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.textBoxSearch_SNI);
+            this.Controls.Add(this.button_Search_SNI);
+            this.Controls.Add(this.comboBox_SNI);
             this.Controls.Add(this.dataGridView_SNI);
             this.Controls.Add(this.panel1);
             this.Name = "FormMain";
@@ -132,7 +303,9 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -144,9 +317,24 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView_SNI;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button_doctor_SNI;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button buttonSave_SNI;
+        private System.Windows.Forms.Button buttonSave_4_SNI;
+        private System.Windows.Forms.Button buttonSave_3_SNI;
+        private System.Windows.Forms.Button buttonSave_2_SNI;
+        private System.Windows.Forms.Button buttonSave_1_SNI;
+        private System.Windows.Forms.Button button_doctor_4_SNI;
+        private System.Windows.Forms.Button button_doctor_3_SNI;
+        private System.Windows.Forms.Button button_doctor_2_SNI;
+        private System.Windows.Forms.Button button_doctor1_SNI;
+        private System.Windows.Forms.ComboBox comboBox_SNI;
+        private System.Windows.Forms.Button button_Search_SNI;
+        private System.Windows.Forms.TextBox textBoxSearch_SNI;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.Button button_updatе_SNI;
     }
 }
 
