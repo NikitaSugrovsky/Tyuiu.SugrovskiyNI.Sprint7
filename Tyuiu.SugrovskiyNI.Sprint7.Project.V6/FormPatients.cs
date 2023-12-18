@@ -16,6 +16,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
         public FormPatients()
         {
             InitializeComponent();
+
         }
 
         private void button_update_SNI_Click(object sender, EventArgs e)
@@ -27,7 +28,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             string phone_number = textBox_numphon_SNI.Text;
             string date = textBox_date_SNI.Text;
 
-            string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number}";
+            string Outpatient = textBox_Outpatient_SNI.Text;
+            string loss = textBox_loss_SNI.Text;
+            string accounting = textBox_accounting_SNI.Text;
+            string note = textBox_note_SNI.Text;
+            string proh = textBox_proh_SNI.Text;
+
+            string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number},{proh}, {Outpatient}, {loss}, {accounting}, {note}";
 
             try
             {
@@ -65,7 +72,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             string phone_number = textBox_numphon_SNI.Text;
             string date = textBox_date_SNI.Text;
 
-            string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number}";
+            string Outpatient = textBox_Outpatient_SNI.Text;
+            string loss = textBox_loss_SNI.Text;
+            string accounting = textBox_accounting_SNI.Text;
+            string note = textBox_note_SNI.Text;
+            string proh = textBox_proh_SNI.Text;
+
+            string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number},{proh}, {Outpatient}, {loss}, {accounting}, {note}";
 
             try
             {
@@ -104,7 +117,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             string phone_number = textBox_numphon_SNI.Text;
             string date = textBox_date_SNI.Text;
 
-            string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number}";
+            string Outpatient = textBox_Outpatient_SNI.Text;
+            string loss = textBox_loss_SNI.Text;
+            string accounting = textBox_accounting_SNI.Text;
+            string note = textBox_note_SNI.Text;
+            string proh = textBox_proh_SNI.Text;
+
+            string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number},{proh}, {Outpatient}, {loss}, {accounting}, {note}";
 
             try
             {
@@ -142,7 +161,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             string phone_number = textBox_numphon_SNI.Text;
             string date = textBox_date_SNI.Text;
 
-            string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number}";
+            string Outpatient = textBox_Outpatient_SNI.Text;
+            string loss = textBox_loss_SNI.Text;
+            string accounting = textBox_accounting_SNI.Text;
+            string note = textBox_note_SNI.Text;
+            string proh = textBox_proh_SNI.Text;
+
+            string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number},{proh}, {Outpatient}, {loss}, {accounting}, {note}";
 
             try
             {
@@ -180,7 +205,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             string phone_number = textBox_numphon_SNI.Text;
             string date = textBox_date_SNI.Text;
 
-            string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number}";
+            string Outpatient = textBox_Outpatient_SNI.Text;
+            string loss = textBox_loss_SNI.Text;
+            string accounting = textBox_accounting_SNI.Text;
+            string note = textBox_note_SNI.Text;
+            string proh = textBox_proh_SNI.Text;
+
+            string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number},{proh}, {Outpatient}, {loss}, {accounting}, {note}";
 
             try
             {
@@ -207,6 +238,11 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                 // Логгирование ошибок может быть более предпочтительным
                 MessageBox.Show($"Ошибка при сохранении данных: {ex.Message}");
             }
+        }
+
+        private void button_OK_SNI_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
 {
     public partial class FormMain : Form
     {
-        string resourceName = @"C:\DataSprint6\InPutFileTask7V28.csv";
+        string resourceName = @"C:\Users\Admin\source\repos\Tyuiu.SugrovskiyNI.Sprint7\Tyuiu.SugrovskiyNI.Sprint7.Project.V6\bin\Debug\OutputFile_5.csv";
         string doctor_1n = @"C:\Users\Admin\source\repos\Tyuiu.SugrovskiyNI.Sprint7\Tyuiu.SugrovskiyNI.Sprint7.Project.V6\bin\Debug\OutputFile_1.csv";
         string doctor_2n = @"C:\Users\Admin\source\repos\Tyuiu.SugrovskiyNI.Sprint7\Tyuiu.SugrovskiyNI.Sprint7.Project.V6\bin\Debug\OutputFile_2.csv";
         string doctor_3n = @"C:\Users\Admin\source\repos\Tyuiu.SugrovskiyNI.Sprint7\Tyuiu.SugrovskiyNI.Sprint7.Project.V6\bin\Debug\OutputFile_3.csv";
@@ -75,13 +75,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                         }
                     }
 
-                    // Привязка данных к DataGridView
+                    
                     BindingSource bindingSource = new BindingSource();
                     bindingSource.DataSource = dataTable;
 
                     dataGridView_SNI.DataSource = bindingSource;
 
-                    // Отключаем сортировку для каждой колонки
+                    
                     foreach (DataGridViewColumn column in dataGridView_SNI.Columns)
                     {
                         column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -100,10 +100,10 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             {
                 using (var writer = new StreamWriter("OutputFile.csv", false, Encoding.UTF8))
                 {
-                    // Записываем заголовочную строку
+                    
                     writer.WriteLine(string.Join(";", dataGridView_SNI.Columns.Cast<DataGridViewColumn>().Select(column => column.HeaderText)));
 
-                    // Записываем строки данных
+                    
                     foreach (DataGridViewRow row in dataGridView_SNI.Rows)
                     {
                         var values = row.Cells.Cast<DataGridViewCell>().Select(cell => (cell.Value ?? "").ToString());
@@ -130,18 +130,18 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
 
                 if (!string.IsNullOrEmpty(selectedColumnName))
                 {
-                    // Получаем уникальные значения из выбранного столбца
+                    
                     var uniqueValues = dataGridView_SNI.Rows.Cast<DataGridViewRow>()
                                           .Select(row => row.Cells[selectedColumnName].Value)
                                           .Where(value => value != null)
                                           .Distinct()
                                           .ToList();
 
-                    // Очищаем старые элементы перед добавлением новых
+                    
                     comboBox_SNI.Items.Clear();
                     comboBox_SNI.Items.AddRange(uniqueValues.ToArray());
 
-                    // Применяем фильтр снова
+                    
                     ApplyFilter(textBoxSearch_SNI.Text);
                 }
             }
@@ -163,10 +163,10 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                     {
                         dataTable.DefaultView.RowFilter = $"{columnName} LIKE '%{searchText}%'";
 
-                        // Снимаем выделение со всех ячеек перед применением нового фильтра
+                        
                         dataGridView_SNI.ClearSelection();
 
-                        // Проходим по всем строкам и выделяем ячейки с найденным текстом
+                       
                         foreach (DataGridViewRow row in dataGridView_SNI.Rows)
                         {
                             foreach (DataGridViewCell cell in row.Cells)
@@ -180,7 +180,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                     }
                     else
                     {
-                        // Если поиск по пустому столбцу, снимаем выделение со всех ячеек
+                        
                         dataGridView_SNI.ClearSelection();
                     }
                 }
@@ -368,13 +368,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                         }
                     }
 
-                    // Привязка данных к DataGridView
+                    
                     BindingSource bindingSource = new BindingSource();
                     bindingSource.DataSource = dataTable;
 
                     dataGridView_SNI.DataSource = bindingSource;
 
-                    // Отключаем сортировку для каждой колонки
+                    
                     foreach (DataGridViewColumn column in dataGridView_SNI.Columns)
                     {
                         column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -413,13 +413,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                         }
                     }
 
-                    // Привязка данных к DataGridView
+                    
                     BindingSource bindingSource = new BindingSource();
                     bindingSource.DataSource = dataTable;
 
                     dataGridView_SNI.DataSource = bindingSource;
 
-                    // Отключаем сортировку для каждой колонки
+                    
                     foreach (DataGridViewColumn column in dataGridView_SNI.Columns)
                     {
                         column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -458,13 +458,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                         }
                     }
 
-                    // Привязка данных к DataGridView
+                    
                     BindingSource bindingSource = new BindingSource();
                     bindingSource.DataSource = dataTable;
 
                     dataGridView_SNI.DataSource = bindingSource;
 
-                    // Отключаем сортировку для каждой колонки
+                    
                     foreach (DataGridViewColumn column in dataGridView_SNI.Columns)
                     {
                         column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -503,13 +503,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                         }
                     }
 
-                    // Привязка данных к DataGridView
+                    
                     BindingSource bindingSource = new BindingSource();
                     bindingSource.DataSource = dataTable;
 
                     dataGridView_SNI.DataSource = bindingSource;
 
-                    // Отключаем сортировку для каждой колонки
+                    
                     foreach (DataGridViewColumn column in dataGridView_SNI.Columns)
                     {
                         column.SortMode = DataGridViewColumnSortMode.NotSortable;

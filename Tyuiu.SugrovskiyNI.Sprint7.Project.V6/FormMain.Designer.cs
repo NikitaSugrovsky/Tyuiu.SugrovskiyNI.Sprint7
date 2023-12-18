@@ -96,7 +96,6 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.dataGridView_SNI.Name = "dataGridView_SNI";
             this.dataGridView_SNI.RowHeadersWidth = 51;
             this.dataGridView_SNI.RowTemplate.Height = 24;
-            this.dataGridView_SNI.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView_SNI.Size = new System.Drawing.Size(888, 415);
             this.dataGridView_SNI.TabIndex = 1;
             this.dataGridView_SNI.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SNI_CellContentClick);
