@@ -557,6 +557,10 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             FormDoctor_5 FormDoctor_5 = new FormDoctor_5();
             FormDoctor_5.ShowDialog();
         }
+        private void button_Help_s_SNI_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipButton.ToolTipTitle = "Нажми сюда";
+        }
     }
 }
                 

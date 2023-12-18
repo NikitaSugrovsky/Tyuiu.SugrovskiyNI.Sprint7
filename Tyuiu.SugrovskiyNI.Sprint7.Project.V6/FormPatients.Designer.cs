@@ -29,6 +29,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox_numphon_SNI = new System.Windows.Forms.TextBox();
@@ -61,6 +62,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_OK_SNI = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox_proh_SNI = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +121,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.textBox_surname_SNI.Name = "textBox_surname_SNI";
             this.textBox_surname_SNI.Size = new System.Drawing.Size(319, 22);
             this.textBox_surname_SNI.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.textBox_surname_SNI, "Записать фамилию пациента");
             // 
             // textBox_date_SNI
             // 
@@ -147,6 +150,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.textBox_Number_SNI.Name = "textBox_Number_SNI";
             this.textBox_Number_SNI.Size = new System.Drawing.Size(319, 22);
             this.textBox_Number_SNI.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.textBox_Number_SNI, "Записать номер пациента");
             // 
             // label6
             // 
@@ -215,6 +219,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_update_SNI.Size = new System.Drawing.Size(259, 36);
             this.button_update_SNI.TabIndex = 13;
             this.button_update_SNI.Text = "Сиряк Данил Сергеевич";
+            this.toolTip1.SetToolTip(this.button_update_SNI, "Обновить данные для данного врача");
             this.button_update_SNI.UseVisualStyleBackColor = true;
             this.button_update_SNI.Click += new System.EventHandler(this.button_update_SNI_Click);
             // 
@@ -240,6 +245,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_doctor_3_SNI.Size = new System.Drawing.Size(259, 36);
             this.button_doctor_3_SNI.TabIndex = 18;
             this.button_doctor_3_SNI.Text = "Сагитов Рашид Шайхуллович";
+            this.toolTip1.SetToolTip(this.button_doctor_3_SNI, "Обновить данные для данного врача");
             this.button_doctor_3_SNI.UseVisualStyleBackColor = true;
             this.button_doctor_3_SNI.Click += new System.EventHandler(this.button_doctor_3_SNI_Click);
             // 
@@ -250,6 +256,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_doctor_4_SNI.Size = new System.Drawing.Size(259, 36);
             this.button_doctor_4_SNI.TabIndex = 17;
             this.button_doctor_4_SNI.Text = "Некрасова Оксана Викторовна";
+            this.toolTip1.SetToolTip(this.button_doctor_4_SNI, "Обновить данные для данного врача");
             this.button_doctor_4_SNI.UseVisualStyleBackColor = true;
             this.button_doctor_4_SNI.Click += new System.EventHandler(this.button_doctor_4_SNI_Click);
             // 
@@ -260,6 +267,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_doctor_2_SNI.Size = new System.Drawing.Size(259, 36);
             this.button_doctor_2_SNI.TabIndex = 16;
             this.button_doctor_2_SNI.Text = "Туляков Станислав Сергеевич";
+            this.toolTip1.SetToolTip(this.button_doctor_2_SNI, "Обновить данные для данного врача");
             this.button_doctor_2_SNI.UseVisualStyleBackColor = true;
             this.button_doctor_2_SNI.Click += new System.EventHandler(this.button_doctor_2_SNI_Click);
             // 
@@ -270,6 +278,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_doctor_1_SNI.Size = new System.Drawing.Size(259, 36);
             this.button_doctor_1_SNI.TabIndex = 15;
             this.button_doctor_1_SNI.Text = "Дьяков Лаврентий Алексеевич";
+            this.toolTip1.SetToolTip(this.button_doctor_1_SNI, "Обновить данные для данного врача");
             this.button_doctor_1_SNI.UseVisualStyleBackColor = true;
             this.button_doctor_1_SNI.Click += new System.EventHandler(this.button_doctor_1_SNI_Click);
             // 
@@ -360,6 +369,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_OK_SNI.Size = new System.Drawing.Size(259, 36);
             this.button_OK_SNI.TabIndex = 19;
             this.button_OK_SNI.Text = "ОК";
+            this.toolTip1.SetToolTip(this.button_OK_SNI, "Нажмите чтобы закрыть окно");
             this.button_OK_SNI.UseVisualStyleBackColor = false;
             this.button_OK_SNI.Click += new System.EventHandler(this.button_OK_SNI_Click);
             // 
@@ -431,5 +441,6 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
         private System.Windows.Forms.Button button_OK_SNI;
         private System.Windows.Forms.TextBox textBox_proh_SNI;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -240,6 +240,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             }
         }
 
+
         private void button_OK_SNI_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -60,6 +60,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_INFO_DOCTOR_3_SNI = new System.Windows.Forms.Button();
             this.button_INFO_DOCTOR_4_SNI = new System.Windows.Forms.Button();
             this.button_INFO_DOCTOR_5_SNI = new System.Windows.Forms.Button();
+            this.toolTipButton = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -107,6 +108,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_doctor_SNI.Size = new System.Drawing.Size(249, 40);
             this.button_doctor_SNI.TabIndex = 2;
             this.button_doctor_SNI.Text = "Сиряк Данил Сергеевич";
+            this.toolTipButton.SetToolTip(this.button_doctor_SNI, "Вывести информацию о пациентах");
             this.button_doctor_SNI.UseVisualStyleBackColor = true;
             this.button_doctor_SNI.Click += new System.EventHandler(this.button_doctor_SNI_Click);
             // 
@@ -126,6 +128,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_doctor1_SNI.Size = new System.Drawing.Size(248, 40);
             this.button_doctor1_SNI.TabIndex = 4;
             this.button_doctor1_SNI.Text = "Дьяков Лаврентий Алексеевич";
+            this.toolTipButton.SetToolTip(this.button_doctor1_SNI, "Вывести информацию о пациентах");
             this.button_doctor1_SNI.UseVisualStyleBackColor = true;
             this.button_doctor1_SNI.Click += new System.EventHandler(this.button_doctor1_SNI_Click);
             // 
@@ -136,6 +139,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_doctor_2_SNI.Size = new System.Drawing.Size(249, 40);
             this.button_doctor_2_SNI.TabIndex = 5;
             this.button_doctor_2_SNI.Text = "Туляков Станислав Сергеевич";
+            this.toolTipButton.SetToolTip(this.button_doctor_2_SNI, "Вывести информацию о пациентах");
             this.button_doctor_2_SNI.UseVisualStyleBackColor = true;
             this.button_doctor_2_SNI.Click += new System.EventHandler(this.button_doctor_2_SNI_Click);
             // 
@@ -146,6 +150,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_doctor_3_SNI.Size = new System.Drawing.Size(248, 40);
             this.button_doctor_3_SNI.TabIndex = 6;
             this.button_doctor_3_SNI.Text = "Сагитов Рашид Шайхуллович";
+            this.toolTipButton.SetToolTip(this.button_doctor_3_SNI, "Вывести информацию о пациентах");
             this.button_doctor_3_SNI.UseVisualStyleBackColor = true;
             this.button_doctor_3_SNI.Click += new System.EventHandler(this.button_doctor_3_SNI_Click);
             // 
@@ -156,6 +161,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_doctor_4_SNI.Size = new System.Drawing.Size(248, 40);
             this.button_doctor_4_SNI.TabIndex = 7;
             this.button_doctor_4_SNI.Text = "Некрасова Оксана Викторовна";
+            this.toolTipButton.SetToolTip(this.button_doctor_4_SNI, "Вывести информацию о пациентах");
             this.button_doctor_4_SNI.UseVisualStyleBackColor = true;
             this.button_doctor_4_SNI.Click += new System.EventHandler(this.button_doctor_4_SNI_Click);
             // 
@@ -228,6 +234,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_INFO_DOCTOR_1_SNI.Name = "button_INFO_DOCTOR_1_SNI";
             this.button_INFO_DOCTOR_1_SNI.Size = new System.Drawing.Size(50, 40);
             this.button_INFO_DOCTOR_1_SNI.TabIndex = 27;
+            this.toolTipButton.SetToolTip(this.button_INFO_DOCTOR_1_SNI, "Вывести данные о враче");
             this.button_INFO_DOCTOR_1_SNI.UseVisualStyleBackColor = true;
             this.button_INFO_DOCTOR_1_SNI.Click += new System.EventHandler(this.button_INFO_DOCTOR_1_SNI_Click);
             // 
@@ -238,6 +245,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_updatе_SNI.Name = "button_updatе_SNI";
             this.button_updatе_SNI.Size = new System.Drawing.Size(122, 46);
             this.button_updatе_SNI.TabIndex = 26;
+            this.toolTipButton.SetToolTip(this.button_updatе_SNI, "Добвить новых пациентов");
             this.button_updatе_SNI.UseVisualStyleBackColor = true;
             this.button_updatе_SNI.Click += new System.EventHandler(this.button_updatе_SNI_Click);
             // 
@@ -248,6 +256,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.buttonSave_1_SNI.Name = "buttonSave_1_SNI";
             this.buttonSave_1_SNI.Size = new System.Drawing.Size(44, 40);
             this.buttonSave_1_SNI.TabIndex = 11;
+            this.toolTipButton.SetToolTip(this.buttonSave_1_SNI, "Сохранить данные в таблице");
             this.buttonSave_1_SNI.UseVisualStyleBackColor = true;
             this.buttonSave_1_SNI.Click += new System.EventHandler(this.buttonSave_1_SNI_Click);
             // 
@@ -258,6 +267,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.buttonSave_SNI.Name = "buttonSave_SNI";
             this.buttonSave_SNI.Size = new System.Drawing.Size(44, 40);
             this.buttonSave_SNI.TabIndex = 3;
+            this.toolTipButton.SetToolTip(this.buttonSave_SNI, "Сохранить данные в таблице");
             this.buttonSave_SNI.UseVisualStyleBackColor = true;
             this.buttonSave_SNI.Click += new System.EventHandler(this.buttonSave_SNI_Click);
             // 
@@ -268,6 +278,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.buttonSave_2_SNI.Name = "buttonSave_2_SNI";
             this.buttonSave_2_SNI.Size = new System.Drawing.Size(44, 40);
             this.buttonSave_2_SNI.TabIndex = 12;
+            this.toolTipButton.SetToolTip(this.buttonSave_2_SNI, "Сохранить данные в таблице");
             this.buttonSave_2_SNI.UseVisualStyleBackColor = true;
             this.buttonSave_2_SNI.Click += new System.EventHandler(this.buttonSave_2_SNI_Click);
             // 
@@ -278,6 +289,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.buttonSave_4_SNI.Name = "buttonSave_4_SNI";
             this.buttonSave_4_SNI.Size = new System.Drawing.Size(44, 40);
             this.buttonSave_4_SNI.TabIndex = 14;
+            this.toolTipButton.SetToolTip(this.buttonSave_4_SNI, "Сохранить данные в таблице");
             this.buttonSave_4_SNI.UseVisualStyleBackColor = true;
             this.buttonSave_4_SNI.Click += new System.EventHandler(this.buttonSave_4_SNI_Click);
             // 
@@ -288,6 +300,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.buttonSave_3_SNI.Name = "buttonSave_3_SNI";
             this.buttonSave_3_SNI.Size = new System.Drawing.Size(44, 40);
             this.buttonSave_3_SNI.TabIndex = 13;
+            this.toolTipButton.SetToolTip(this.buttonSave_3_SNI, "Сохранить данные в таблице");
             this.buttonSave_3_SNI.UseVisualStyleBackColor = true;
             this.buttonSave_3_SNI.Click += new System.EventHandler(this.buttonSave_3_SNI_Click);
             // 
@@ -299,8 +312,10 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_Help_s_SNI.Name = "button_Help_s_SNI";
             this.button_Help_s_SNI.Size = new System.Drawing.Size(45, 45);
             this.button_Help_s_SNI.TabIndex = 2;
+            this.toolTipButton.SetToolTip(this.button_Help_s_SNI, "Узнать о программе ");
             this.button_Help_s_SNI.UseVisualStyleBackColor = false;
             this.button_Help_s_SNI.Click += new System.EventHandler(this.button_Help_s_SNI_Click);
+            this.button_Help_s_SNI.MouseEnter += new System.EventHandler(this.button_Help_s_SNI_MouseEnter);
             // 
             // buttonHelp_SNI_Click
             // 
@@ -311,6 +326,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.buttonHelp_SNI_Click.Name = "buttonHelp_SNI_Click";
             this.buttonHelp_SNI_Click.Size = new System.Drawing.Size(48, 44);
             this.buttonHelp_SNI_Click.TabIndex = 1;
+            this.toolTipButton.SetToolTip(this.buttonHelp_SNI_Click, "Узнать о разработчике ");
             this.buttonHelp_SNI_Click.UseVisualStyleBackColor = false;
             this.buttonHelp_SNI_Click.Click += new System.EventHandler(this.buttonHelp_SNI_Click_Click);
             // 
@@ -321,6 +337,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_INFO_DOCTOR_2_SNI.Name = "button_INFO_DOCTOR_2_SNI";
             this.button_INFO_DOCTOR_2_SNI.Size = new System.Drawing.Size(50, 40);
             this.button_INFO_DOCTOR_2_SNI.TabIndex = 28;
+            this.toolTipButton.SetToolTip(this.button_INFO_DOCTOR_2_SNI, "Вывести данные о враче");
             this.button_INFO_DOCTOR_2_SNI.UseVisualStyleBackColor = true;
             this.button_INFO_DOCTOR_2_SNI.Click += new System.EventHandler(this.button_INFO_DOCTOR_2_SNI_Click);
             // 
@@ -331,6 +348,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_INFO_DOCTOR_3_SNI.Name = "button_INFO_DOCTOR_3_SNI";
             this.button_INFO_DOCTOR_3_SNI.Size = new System.Drawing.Size(50, 40);
             this.button_INFO_DOCTOR_3_SNI.TabIndex = 29;
+            this.toolTipButton.SetToolTip(this.button_INFO_DOCTOR_3_SNI, "Вывести данные о враче");
             this.button_INFO_DOCTOR_3_SNI.UseVisualStyleBackColor = true;
             this.button_INFO_DOCTOR_3_SNI.Click += new System.EventHandler(this.button_INFO_DOCTOR_3_SNI_Click);
             // 
@@ -341,6 +359,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_INFO_DOCTOR_4_SNI.Name = "button_INFO_DOCTOR_4_SNI";
             this.button_INFO_DOCTOR_4_SNI.Size = new System.Drawing.Size(50, 40);
             this.button_INFO_DOCTOR_4_SNI.TabIndex = 30;
+            this.toolTipButton.SetToolTip(this.button_INFO_DOCTOR_4_SNI, "Вывести данные о враче");
             this.button_INFO_DOCTOR_4_SNI.UseVisualStyleBackColor = true;
             this.button_INFO_DOCTOR_4_SNI.Click += new System.EventHandler(this.button_INFO_DOCTOR_4_SNI_Click);
             // 
@@ -351,6 +370,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_INFO_DOCTOR_5_SNI.Name = "button_INFO_DOCTOR_5_SNI";
             this.button_INFO_DOCTOR_5_SNI.Size = new System.Drawing.Size(50, 40);
             this.button_INFO_DOCTOR_5_SNI.TabIndex = 31;
+            this.toolTipButton.SetToolTip(this.button_INFO_DOCTOR_5_SNI, "Вывести данные о враче");
             this.button_INFO_DOCTOR_5_SNI.UseVisualStyleBackColor = true;
             this.button_INFO_DOCTOR_5_SNI.Click += new System.EventHandler(this.button_INFO_DOCTOR_5_SNI_Click);
             // 
@@ -409,6 +429,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
         private System.Windows.Forms.Button button_INFO_DOCTOR_4_SNI;
         private System.Windows.Forms.Button button_INFO_DOCTOR_3_SNI;
         private System.Windows.Forms.Button button_INFO_DOCTOR_2_SNI;
+        private System.Windows.Forms.ToolTip toolTipButton;
     }
 }
 
