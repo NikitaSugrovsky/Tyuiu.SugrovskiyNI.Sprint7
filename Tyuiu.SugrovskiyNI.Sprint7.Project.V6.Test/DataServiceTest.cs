@@ -13,26 +13,11 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Test
         {
             DataService ds = new DataService();
 
-            string filePath = @"C:\DataSprint6\InPutFileTask7V28.csv";
-
-            AddDataToCSV(filePath);
-        }
-
-        private void AddDataToCSV(string filePath)
-        {
-            try
-            {
-                using (var writer = new StreamWriter(filePath, true)) // открываем файл для дозаписи
-                {
-                    // Пример добавления строки в формате "Врач;Пациенты"
-                    writer.WriteLine("НовыйДоктор;Пациент1, Пациент2");
-                }
-            }
-            catch (Exception ex)
-            {
-                // Обработка ошибок при записи в файл
-                Console.WriteLine($"Error: {ex.Message}");
-            }
+            string path = @"C:\Users\Admin\source\repos\Tyuiu.SugrovskiyNI.Sprint7\Tyuiu.SugrovskiyNI.Sprint7.Project.V6\bin\Debug\OutputFile.csv";
+            FileInfo fileinfo = new FileInfo(path);
+            bool fileex = fileinfo.Exists;
+            bool wait = true;
+            Assert.AreEqual(wait, fileex);
         }
     }
 }

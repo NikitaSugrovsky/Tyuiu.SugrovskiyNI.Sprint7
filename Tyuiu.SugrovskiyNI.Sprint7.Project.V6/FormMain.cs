@@ -126,23 +126,26 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
         {
             if (comboBox_SNI != null && dataGridView_SNI != null && dataGridView_SNI.Columns.Count > 0)
             {
-                string selectedColumnName = comboBox_SNI.SelectedItem.ToString();
+                string selectedColumnName = comboBox_SNI.SelectedItem?.ToString();
 
-                // Получаем уникальные значения из выбранного столбца
-                var uniqueValues = dataGridView_SNI.Rows.Cast<DataGridViewRow>()
-                                      .Select(row => row.Cells[selectedColumnName].Value)
-                                      .Where(value => value != null)
-                                      .Distinct()
-                                      .ToList();
+                if (!string.IsNullOrEmpty(selectedColumnName))
+                {
+                    // Получаем уникальные значения из выбранного столбца
+                    var uniqueValues = dataGridView_SNI.Rows.Cast<DataGridViewRow>()
+                                          .Select(row => row.Cells[selectedColumnName].Value)
+                                          .Where(value => value != null)
+                                          .Distinct()
+                                          .ToList();
 
-                // Очищаем старые элементы перед добавлением новых
-                comboBox_SNI.Items.Clear();
-                comboBox_SNI.Items.AddRange(uniqueValues.ToArray());
+                    // Очищаем старые элементы перед добавлением новых
+                    comboBox_SNI.Items.Clear();
+                    comboBox_SNI.Items.AddRange(uniqueValues.ToArray());
 
-                // Применяем фильтр снова
-                ApplyFilter(textBoxSearch_SNI.Text);
+                    // Применяем фильтр снова
+                    ApplyFilter(textBoxSearch_SNI.Text);
+                }
             }
-        }
+         }
 
         private void button_Search_SNI_Click(object sender, EventArgs e)
         {
@@ -517,6 +520,42 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             {
                 Console.WriteLine($"Error: {ex.Message}");
             }
+        }
+
+        private void button_Help_s_SNI_Click(object sender, EventArgs e)
+        {
+            FormHelp FormHelp = new FormHelp();
+            FormHelp.ShowDialog();
+        }
+
+        private void button_INFO_DOCTOR_1_SNI_Click(object sender, EventArgs e)
+        {
+            FormDoctor_1 FormDoctor_1 = new FormDoctor_1();
+            FormDoctor_1.ShowDialog();
+        }
+
+        private void button_INFO_DOCTOR_2_SNI_Click(object sender, EventArgs e)
+        {
+            FormDoctor_2 FormDoctor_2 = new FormDoctor_2();
+            FormDoctor_2.ShowDialog();
+        }
+
+        private void button_INFO_DOCTOR_3_SNI_Click(object sender, EventArgs e)
+        {
+            FormDoctor_3 FormDoctor_3 = new FormDoctor_3();
+            FormDoctor_3.ShowDialog();
+        }
+
+        private void button_INFO_DOCTOR_4_SNI_Click(object sender, EventArgs e)
+        {
+            FormDoctor_4 FormDoctor_4 = new FormDoctor_4();
+            FormDoctor_4.ShowDialog();
+        }
+
+        private void button_INFO_DOCTOR_5_SNI_Click(object sender, EventArgs e)
+        {
+            FormDoctor_5 FormDoctor_5 = new FormDoctor_5();
+            FormDoctor_5.ShowDialog();
         }
     }
 }
