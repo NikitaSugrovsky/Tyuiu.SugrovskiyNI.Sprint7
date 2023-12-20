@@ -47,7 +47,6 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.textBoxSearch_SNI = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolTipButton = new System.Windows.Forms.ToolTip(this.components);
-            this.comboBox_SNI = new System.Windows.Forms.ComboBox();
             this.button_Line_SNI = new System.Windows.Forms.Button();
             this.button_INFO_DOCTOR_5_SNI = new System.Windows.Forms.Button();
             this.button_INFO_DOCTOR_4_SNI = new System.Windows.Forms.Button();
@@ -174,7 +173,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_Search_SNI.TabIndex = 23;
             this.button_Search_SNI.Text = "Поиск";
             this.button_Search_SNI.UseVisualStyleBackColor = true;
-            this.button_Search_SNI.Click += new System.EventHandler(this.button_Search_SNI_Click);
+            this.button_Search_SNI.Click += new System.EventHandler(this.textBoxSearch_SNI_TextChanged);
             // 
             // groupBox1
             // 
@@ -207,11 +206,10 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             // 
             // textBoxSearch_SNI
             // 
-            this.textBoxSearch_SNI.Location = new System.Drawing.Point(530, 74);
+            this.textBoxSearch_SNI.Location = new System.Drawing.Point(748, 57);
             this.textBoxSearch_SNI.Name = "textBoxSearch_SNI";
-            this.textBoxSearch_SNI.Size = new System.Drawing.Size(100, 22);
+            this.textBoxSearch_SNI.Size = new System.Drawing.Size(596, 22);
             this.textBoxSearch_SNI.TabIndex = 27;
-            this.textBoxSearch_SNI.Click += new System.EventHandler(this.textBoxSearch_SNI_TextChanged);
             this.textBoxSearch_SNI.TextChanged += new System.EventHandler(this.textBoxSearch_SNI_TextChanged);
             // 
             // contextMenuStrip1
@@ -219,16 +217,6 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // comboBox_SNI
-            // 
-            this.comboBox_SNI.FormattingEnabled = true;
-            this.comboBox_SNI.Location = new System.Drawing.Point(702, 53);
-            this.comboBox_SNI.Name = "comboBox_SNI";
-            this.comboBox_SNI.Size = new System.Drawing.Size(592, 24);
-            this.comboBox_SNI.TabIndex = 21;
-            this.comboBox_SNI.SelectedIndexChanged += new System.EventHandler(this.comboBox_SNI_SelectedIndexChanged);
-            this.comboBox_SNI.Click += new System.EventHandler(this.button_Search_SNI_Click);
             // 
             // button_Line_SNI
             // 
@@ -398,7 +386,6 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.Controls.Add(this.textBoxSearch_SNI);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button_Search_SNI);
-            this.Controls.Add(this.comboBox_SNI);
             this.Controls.Add(this.dataGridView_SNI);
             this.Controls.Add(this.panel1);
             this.Name = "FormMain";
@@ -445,7 +432,6 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
         private System.Windows.Forms.Button button_INFO_DOCTOR_3_SNI;
         private System.Windows.Forms.Button button_INFO_DOCTOR_2_SNI;
         private System.Windows.Forms.ToolTip toolTipButton;
-        private System.Windows.Forms.ComboBox comboBox_SNI;
         private System.Windows.Forms.Button button_Line_SNI;
     }
 }

@@ -27,10 +27,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             InitializeComponent();
             button_doctor_SNI.Click += button_doctor_SNI_Click;
             button_Search_SNI.Click += button_Search_SNI_Click;
-            comboBox_SNI.SelectedIndexChanged += comboBox_SNI_SelectedIndexChanged;
             dataGridView_SNI.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-
         }
 
 
@@ -46,9 +43,8 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridView_SNI.Rows[e.RowIndex];
-
-
             }
+            
         }
 
         private void button_doctor_SNI_Click(object sender, EventArgs e)
@@ -124,53 +120,27 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
 
 
 
-        private void comboBox_SNI_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox_SNI != null && dataGridView_SNI != null && dataGridView_SNI.Columns.Count > 0)
-            {
-                string selectedColumnName = comboBox_SNI.SelectedItem?.ToString();
-
-                if (!string.IsNullOrEmpty(selectedColumnName))
-                {
-
-                    var uniqueValues = dataGridView_SNI.Rows.Cast<DataGridViewRow>()
-                                          .Select(row => row.Cells[selectedColumnName].Value)
-                                          .Where(value => value != null)
-                                          .Distinct()
-                                          .ToList();
-
-
-                    comboBox_SNI.Items.Clear();
-                    comboBox_SNI.Items.AddRange(uniqueValues.ToArray());
-
-
-                    ApplyFilter(textBoxSearch_SNI.Text);
-                }
-            }
-        }
 
         private void button_Search_SNI_Click(object sender, EventArgs e)
         {
             ApplyFilter(textBoxSearch_SNI.Text);
+
         }
         private void ApplyFilter(string searchText)
         {
             if (dataGridView_SNI.DataSource is DataTable dataTable)
             {
-                if (comboBox_SNI.SelectedItem != null)
-                {
-                    string columnName = comboBox_SNI.SelectedItem.ToString();
+                // Применяем фильтр ко всем колонкам таблицы
+                string filterExpression = string.Join(" OR ",
+                    dataTable.Columns.Cast<DataColumn>().Select(column =>
+                        $"{column.ColumnName} LIKE '%{searchText}%'"));
 
-                    if (!string.IsNullOrEmpty(columnName))
-                    {
-                        dataTable.DefaultView.RowFilter = $"{columnName} LIKE '%{searchText}%'";
+                dataTable.DefaultView.RowFilter = filterExpression;
 
-
-                        dataGridView_SNI.ClearSelection();
-                    }
-                }
+                // Снимаем выделение ячеек
+                dataGridView_SNI.ClearSelection();
             }
-        }
+        }    
 
         private void updatе_SNI_Click(object sender, EventArgs e)
         {

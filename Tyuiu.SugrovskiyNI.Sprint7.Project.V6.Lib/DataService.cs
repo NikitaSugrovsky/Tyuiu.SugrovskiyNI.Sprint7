@@ -22,13 +22,9 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Lib
                         var line = reader.ReadLine();
                         var values = line.Split(';');
 
-                        if (values.Length > columnIndex && double.TryParse(values[columnIndex], out double value))
+                        if (columnIndex >= 0 && columnIndex < values.Length && double.TryParse(values[columnIndex], out double value))
                         {
                             data.Add(value);
-                        }
-                        else
-                        {
-                            // Обработка ошибок, например, если значение не является числом
                         }
                     }
                 }
@@ -36,10 +32,10 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Lib
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
-                // Обработка ошибок чтения файла
             }
 
             return data;
-        }
+        
+          }
     }
 }
