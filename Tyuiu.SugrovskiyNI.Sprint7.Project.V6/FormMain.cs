@@ -30,7 +30,9 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             comboBox_SNI.SelectedIndexChanged += comboBox_SNI_SelectedIndexChanged;
             dataGridView_SNI.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
+
         }
+
 
 
         private void buttonHelp_SNI_Click_Click(object sender, EventArgs e)
@@ -75,13 +77,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                         }
                     }
 
-                    
+
                     BindingSource bindingSource = new BindingSource();
                     bindingSource.DataSource = dataTable;
 
                     dataGridView_SNI.DataSource = bindingSource;
 
-                    
+
                     foreach (DataGridViewColumn column in dataGridView_SNI.Columns)
                     {
                         column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -100,10 +102,10 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             {
                 using (var writer = new StreamWriter("OutputFile.csv", false, Encoding.UTF8))
                 {
-                    
+
                     writer.WriteLine(string.Join(";", dataGridView_SNI.Columns.Cast<DataGridViewColumn>().Select(column => column.HeaderText)));
 
-                    
+
                     foreach (DataGridViewRow row in dataGridView_SNI.Rows)
                     {
                         var values = row.Cells.Cast<DataGridViewCell>().Select(cell => (cell.Value ?? "").ToString());
@@ -130,22 +132,22 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
 
                 if (!string.IsNullOrEmpty(selectedColumnName))
                 {
-                    
+
                     var uniqueValues = dataGridView_SNI.Rows.Cast<DataGridViewRow>()
                                           .Select(row => row.Cells[selectedColumnName].Value)
                                           .Where(value => value != null)
                                           .Distinct()
                                           .ToList();
 
-                    
+
                     comboBox_SNI.Items.Clear();
                     comboBox_SNI.Items.AddRange(uniqueValues.ToArray());
 
-                    
+
                     ApplyFilter(textBoxSearch_SNI.Text);
                 }
             }
-         }
+        }
 
         private void button_Search_SNI_Click(object sender, EventArgs e)
         {
@@ -163,24 +165,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                     {
                         dataTable.DefaultView.RowFilter = $"{columnName} LIKE '%{searchText}%'";
 
-                        
-                        dataGridView_SNI.ClearSelection();
 
-                       
-                        foreach (DataGridViewRow row in dataGridView_SNI.Rows)
-                        {
-                            foreach (DataGridViewCell cell in row.Cells)
-                            {
-                                if (cell.Value != null && cell.Value.ToString().IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0)
-                                {
-                                    cell.Selected = true;
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        
                         dataGridView_SNI.ClearSelection();
                     }
                 }
@@ -368,13 +353,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                         }
                     }
 
-                    
+
                     BindingSource bindingSource = new BindingSource();
                     bindingSource.DataSource = dataTable;
 
                     dataGridView_SNI.DataSource = bindingSource;
 
-                    
+
                     foreach (DataGridViewColumn column in dataGridView_SNI.Columns)
                     {
                         column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -413,13 +398,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                         }
                     }
 
-                    
+
                     BindingSource bindingSource = new BindingSource();
                     bindingSource.DataSource = dataTable;
 
                     dataGridView_SNI.DataSource = bindingSource;
 
-                    
+
                     foreach (DataGridViewColumn column in dataGridView_SNI.Columns)
                     {
                         column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -458,13 +443,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                         }
                     }
 
-                    
+
                     BindingSource bindingSource = new BindingSource();
                     bindingSource.DataSource = dataTable;
 
                     dataGridView_SNI.DataSource = bindingSource;
 
-                    
+
                     foreach (DataGridViewColumn column in dataGridView_SNI.Columns)
                     {
                         column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -503,13 +488,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                         }
                     }
 
-                    
+
                     BindingSource bindingSource = new BindingSource();
                     bindingSource.DataSource = dataTable;
 
                     dataGridView_SNI.DataSource = bindingSource;
 
-                    
+
                     foreach (DataGridViewColumn column in dataGridView_SNI.Columns)
                     {
                         column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -561,8 +546,31 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
         {
             toolTipButton.ToolTipTitle = "Нажми сюда";
         }
+
+        private void textBoxSearch_SNI_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = textBoxSearch_SNI.Text;
+
+            foreach (DataGridViewRow row in dataGridView_SNI.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value != null && cell.Value.ToString().IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        cell.Selected = true;
+                    }
+                }
+            }
+        }
+
+        private void button_Line_SNI_Click(object sender, EventArgs e)
+        {
+            FormChar FormChar = new FormChar();
+            FormChar.ShowDialog();
+        }
     }
 }
+
                 
             
         
