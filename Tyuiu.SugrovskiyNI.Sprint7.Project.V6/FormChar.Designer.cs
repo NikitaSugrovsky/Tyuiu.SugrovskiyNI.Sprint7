@@ -45,8 +45,10 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.chart_Line_SNI.Legends.Add(legend1);
             this.chart_Line_SNI.Location = new System.Drawing.Point(12, 21);
             this.chart_Line_SNI.Name = "chart_Line_SNI";
+            series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.Lime;
             series1.IsVisibleInLegend = false;
             series1.Legend = "Legend1";
             series1.Name = "Series1";

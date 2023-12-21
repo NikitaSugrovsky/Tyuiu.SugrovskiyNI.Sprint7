@@ -29,6 +29,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             button_Search_SNI.Click += button_Search_SNI_Click;
             dataGridView_SNI.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+        DataService ds = new DataService();
 
 
 
@@ -535,6 +536,10 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
 
         private void button_Line_SNI_Click(object sender, EventArgs e)
         {
+            string filePath = @"C:\Users\Admin\source\repos\Tyuiu.SugrovskiyNI.Sprint7\Tyuiu.SugrovskiyNI.Sprint7.Project.V6\bin\Debug\OutputFile_5.csv";
+            int columnIndex = 0;
+
+            List<double> data = ds.GetDataForColumn(filePath, columnIndex);
             FormChar FormChar = new FormChar();
             FormChar.ShowDialog();
         }
