@@ -11,7 +11,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Lib
     {
         public List<double> GetDataForColumn(string filePath, int columnIndex)
         {
-            List<double> data = new List<double>();
+            List<double> GetDataForColumn = new List<double>(); // Изменяем на List<double>
 
             try
             {
@@ -22,9 +22,17 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Lib
                         var line = reader.ReadLine();
                         var values = line.Split(';');
 
-                        if (columnIndex >= 0 && columnIndex < values.Length && double.TryParse(values[columnIndex], out double value))
+                        if (values.Length > columnIndex) // Используем переданный индекс
                         {
-                            data.Add(value);
+                            // Заменяем на List<double> и учитываем возможные ошибки при парсинге
+                            if (double.TryParse(values[columnIndex].Trim().ToLower(), out double result))
+                            {
+                                GetDataForColumn.Add(result);
+                            }
+                            else
+                            {
+                                Console.WriteLine($"Error parsing value: {values[columnIndex]}");
+                            }
                         }
                     }
                 }
@@ -34,8 +42,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Lib
                 Console.WriteLine($"Error: {ex.Message}");
             }
 
-            return data;
-        
-          }
+            return GetDataForColumn;
+        }
     }
 }

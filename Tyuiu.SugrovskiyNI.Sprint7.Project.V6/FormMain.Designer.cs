@@ -31,6 +31,8 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_Help_s_SNI = new System.Windows.Forms.Button();
+            this.buttonHelp_SNI_Click = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView_SNI = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -43,11 +45,6 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.button_doctor_4_SNI = new System.Windows.Forms.Button();
             this.button_Search_SNI = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.textBoxSearch_SNI = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolTipButton = new System.Windows.Forms.ToolTip(this.components);
-            this.button_Line_SNI = new System.Windows.Forms.Button();
             this.button_INFO_DOCTOR_5_SNI = new System.Windows.Forms.Button();
             this.button_INFO_DOCTOR_4_SNI = new System.Windows.Forms.Button();
             this.button_INFO_DOCTOR_3_SNI = new System.Windows.Forms.Button();
@@ -59,8 +56,11 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.buttonSave_2_SNI = new System.Windows.Forms.Button();
             this.buttonSave_4_SNI = new System.Windows.Forms.Button();
             this.buttonSave_3_SNI = new System.Windows.Forms.Button();
-            this.button_Help_s_SNI = new System.Windows.Forms.Button();
-            this.buttonHelp_SNI_Click = new System.Windows.Forms.Button();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.textBoxSearch_SNI = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolTipButton = new System.Windows.Forms.ToolTip(this.components);
+            this.button_Line_SNI = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SNI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -79,6 +79,32 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1356, 51);
             this.panel1.TabIndex = 0;
+            // 
+            // button_Help_s_SNI
+            // 
+            this.button_Help_s_SNI.BackColor = System.Drawing.Color.Aquamarine;
+            this.button_Help_s_SNI.Image = global::Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Properties.Resources.cog;
+            this.button_Help_s_SNI.Location = new System.Drawing.Point(1205, 3);
+            this.button_Help_s_SNI.Name = "button_Help_s_SNI";
+            this.button_Help_s_SNI.Size = new System.Drawing.Size(45, 45);
+            this.button_Help_s_SNI.TabIndex = 2;
+            this.toolTipButton.SetToolTip(this.button_Help_s_SNI, "Узнать о программе ");
+            this.button_Help_s_SNI.UseVisualStyleBackColor = false;
+            this.button_Help_s_SNI.Click += new System.EventHandler(this.button_Help_s_SNI_Click);
+            this.button_Help_s_SNI.MouseEnter += new System.EventHandler(this.button_Help_s_SNI_MouseEnter);
+            // 
+            // buttonHelp_SNI_Click
+            // 
+            this.buttonHelp_SNI_Click.BackColor = System.Drawing.Color.Aquamarine;
+            this.buttonHelp_SNI_Click.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonHelp_SNI_Click.Image = global::Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Properties.Resources.help;
+            this.buttonHelp_SNI_Click.Location = new System.Drawing.Point(1256, 3);
+            this.buttonHelp_SNI_Click.Name = "buttonHelp_SNI_Click";
+            this.buttonHelp_SNI_Click.Size = new System.Drawing.Size(48, 44);
+            this.buttonHelp_SNI_Click.TabIndex = 1;
+            this.toolTipButton.SetToolTip(this.buttonHelp_SNI_Click, "Узнать о разработчике ");
+            this.buttonHelp_SNI_Click.UseVisualStyleBackColor = false;
+            this.buttonHelp_SNI_Click.Click += new System.EventHandler(this.buttonHelp_SNI_Click_Click);
             // 
             // label1
             // 
@@ -167,7 +193,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             // 
             // button_Search_SNI
             // 
-            this.button_Search_SNI.Location = new System.Drawing.Point(1219, 95);
+            this.button_Search_SNI.Location = new System.Drawing.Point(1229, 71);
             this.button_Search_SNI.Name = "button_Search_SNI";
             this.button_Search_SNI.Size = new System.Drawing.Size(75, 23);
             this.button_Search_SNI.TabIndex = 23;
@@ -199,36 +225,6 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Врачи";
-            // 
-            // openFileDialog2
-            // 
-            this.openFileDialog2.FileName = "openFileDialog2";
-            // 
-            // textBoxSearch_SNI
-            // 
-            this.textBoxSearch_SNI.Location = new System.Drawing.Point(748, 57);
-            this.textBoxSearch_SNI.Name = "textBoxSearch_SNI";
-            this.textBoxSearch_SNI.Size = new System.Drawing.Size(596, 22);
-            this.textBoxSearch_SNI.TabIndex = 27;
-            this.textBoxSearch_SNI.TextChanged += new System.EventHandler(this.textBoxSearch_SNI_TextChanged);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // button_Line_SNI
-            // 
-            this.button_Line_SNI.Location = new System.Drawing.Point(1183, 561);
-            this.button_Line_SNI.Name = "button_Line_SNI";
-            this.button_Line_SNI.Size = new System.Drawing.Size(161, 41);
-            this.button_Line_SNI.TabIndex = 28;
-            this.button_Line_SNI.Text = "Построить график";
-            this.toolTipButton.SetToolTip(this.button_Line_SNI, "Построит график,который показывает повышается или понижается количество людей на " +
-        "амбулаторном лечении");
-            this.button_Line_SNI.UseVisualStyleBackColor = true;
-            this.button_Line_SNI.Click += new System.EventHandler(this.button_Line_SNI_Click);
             // 
             // button_INFO_DOCTOR_5_SNI
             // 
@@ -351,31 +347,35 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.buttonSave_3_SNI.UseVisualStyleBackColor = true;
             this.buttonSave_3_SNI.Click += new System.EventHandler(this.buttonSave_3_SNI_Click);
             // 
-            // button_Help_s_SNI
+            // openFileDialog2
             // 
-            this.button_Help_s_SNI.BackColor = System.Drawing.Color.Aquamarine;
-            this.button_Help_s_SNI.Image = global::Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Properties.Resources.cog;
-            this.button_Help_s_SNI.Location = new System.Drawing.Point(1205, 3);
-            this.button_Help_s_SNI.Name = "button_Help_s_SNI";
-            this.button_Help_s_SNI.Size = new System.Drawing.Size(45, 45);
-            this.button_Help_s_SNI.TabIndex = 2;
-            this.toolTipButton.SetToolTip(this.button_Help_s_SNI, "Узнать о программе ");
-            this.button_Help_s_SNI.UseVisualStyleBackColor = false;
-            this.button_Help_s_SNI.Click += new System.EventHandler(this.button_Help_s_SNI_Click);
-            this.button_Help_s_SNI.MouseEnter += new System.EventHandler(this.button_Help_s_SNI_MouseEnter);
+            this.openFileDialog2.FileName = "openFileDialog2";
             // 
-            // buttonHelp_SNI_Click
+            // textBoxSearch_SNI
             // 
-            this.buttonHelp_SNI_Click.BackColor = System.Drawing.Color.Aquamarine;
-            this.buttonHelp_SNI_Click.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonHelp_SNI_Click.Image = global::Tyuiu.SugrovskiyNI.Sprint7.Project.V6.Properties.Resources.help;
-            this.buttonHelp_SNI_Click.Location = new System.Drawing.Point(1256, 3);
-            this.buttonHelp_SNI_Click.Name = "buttonHelp_SNI_Click";
-            this.buttonHelp_SNI_Click.Size = new System.Drawing.Size(48, 44);
-            this.buttonHelp_SNI_Click.TabIndex = 1;
-            this.toolTipButton.SetToolTip(this.buttonHelp_SNI_Click, "Узнать о разработчике ");
-            this.buttonHelp_SNI_Click.UseVisualStyleBackColor = false;
-            this.buttonHelp_SNI_Click.Click += new System.EventHandler(this.buttonHelp_SNI_Click_Click);
+            this.textBoxSearch_SNI.Location = new System.Drawing.Point(600, 71);
+            this.textBoxSearch_SNI.Name = "textBoxSearch_SNI";
+            this.textBoxSearch_SNI.Size = new System.Drawing.Size(596, 22);
+            this.textBoxSearch_SNI.TabIndex = 27;
+            this.textBoxSearch_SNI.TextChanged += new System.EventHandler(this.textBoxSearch_SNI_TextChanged);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // button_Line_SNI
+            // 
+            this.button_Line_SNI.Location = new System.Drawing.Point(1183, 561);
+            this.button_Line_SNI.Name = "button_Line_SNI";
+            this.button_Line_SNI.Size = new System.Drawing.Size(161, 41);
+            this.button_Line_SNI.TabIndex = 28;
+            this.button_Line_SNI.Text = "Построить график";
+            this.toolTipButton.SetToolTip(this.button_Line_SNI, "Построит график,который показывает повышается или понижается количество людей на " +
+        "амбулаторном лечении");
+            this.button_Line_SNI.UseVisualStyleBackColor = true;
+            this.button_Line_SNI.Click += new System.EventHandler(this.button_Line_SNI_Click);
             // 
             // FormMain
             // 

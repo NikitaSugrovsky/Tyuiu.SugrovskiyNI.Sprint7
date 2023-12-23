@@ -31,6 +31,16 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox_proh_SNI = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox_note_SNI = new System.Windows.Forms.TextBox();
+            this.textBox_accounting_SNI = new System.Windows.Forms.TextBox();
+            this.textBox_loss_SNI = new System.Windows.Forms.TextBox();
+            this.textBox_Outpatient_SNI = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox_numphon_SNI = new System.Windows.Forms.TextBox();
             this.textBox_surname_SNI = new System.Windows.Forms.TextBox();
@@ -46,22 +56,12 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.label1 = new System.Windows.Forms.Label();
             this.button_update_SNI = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button_OK_SNI = new System.Windows.Forms.Button();
             this.button_doctor_3_SNI = new System.Windows.Forms.Button();
             this.button_doctor_4_SNI = new System.Windows.Forms.Button();
             this.button_doctor_2_SNI = new System.Windows.Forms.Button();
             this.button_doctor_1_SNI = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox_Outpatient_SNI = new System.Windows.Forms.TextBox();
-            this.textBox_loss_SNI = new System.Windows.Forms.TextBox();
-            this.textBox_accounting_SNI = new System.Windows.Forms.TextBox();
-            this.textBox_note_SNI = new System.Windows.Forms.TextBox();
-            this.button_OK_SNI = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox_proh_SNI = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -98,11 +98,97 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // textBox_proh_SNI
+            // 
+            this.textBox_proh_SNI.Location = new System.Drawing.Point(696, 49);
+            this.textBox_proh_SNI.Name = "textBox_proh_SNI";
+            this.textBox_proh_SNI.Size = new System.Drawing.Size(287, 22);
+            this.textBox_proh_SNI.TabIndex = 22;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(492, 49);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(192, 20);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Поставьте прочерк";
+            // 
+            // textBox_note_SNI
+            // 
+            this.textBox_note_SNI.Location = new System.Drawing.Point(632, 303);
+            this.textBox_note_SNI.Multiline = true;
+            this.textBox_note_SNI.Name = "textBox_note_SNI";
+            this.textBox_note_SNI.Size = new System.Drawing.Size(379, 110);
+            this.textBox_note_SNI.TabIndex = 20;
+            // 
+            // textBox_accounting_SNI
+            // 
+            this.textBox_accounting_SNI.Location = new System.Drawing.Point(696, 235);
+            this.textBox_accounting_SNI.Name = "textBox_accounting_SNI";
+            this.textBox_accounting_SNI.Size = new System.Drawing.Size(287, 22);
+            this.textBox_accounting_SNI.TabIndex = 19;
+            // 
+            // textBox_loss_SNI
+            // 
+            this.textBox_loss_SNI.Location = new System.Drawing.Point(696, 181);
+            this.textBox_loss_SNI.Name = "textBox_loss_SNI";
+            this.textBox_loss_SNI.Size = new System.Drawing.Size(287, 22);
+            this.textBox_loss_SNI.TabIndex = 18;
+            // 
+            // textBox_Outpatient_SNI
+            // 
+            this.textBox_Outpatient_SNI.Location = new System.Drawing.Point(696, 115);
+            this.textBox_Outpatient_SNI.Name = "textBox_Outpatient_SNI";
+            this.textBox_Outpatient_SNI.Size = new System.Drawing.Size(287, 22);
+            this.textBox_Outpatient_SNI.TabIndex = 17;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(492, 303);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(124, 20);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Примечание";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(488, 235);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(180, 40);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "На диспансерном \r\nучете";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(486, 163);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(182, 40);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Срок потери \r\nтрудоспособности";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(492, 97);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(149, 40);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Амбулаторное \r\nлечение";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(332, 18);
+            this.label7.Location = new System.Drawing.Point(330, 6);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(340, 24);
             this.label7.TabIndex = 12;
@@ -238,6 +324,18 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             // 
+            // button_OK_SNI
+            // 
+            this.button_OK_SNI.BackColor = System.Drawing.Color.Lime;
+            this.button_OK_SNI.Location = new System.Drawing.Point(696, 154);
+            this.button_OK_SNI.Name = "button_OK_SNI";
+            this.button_OK_SNI.Size = new System.Drawing.Size(259, 36);
+            this.button_OK_SNI.TabIndex = 19;
+            this.button_OK_SNI.Text = "ОК";
+            this.toolTip1.SetToolTip(this.button_OK_SNI, "Нажмите чтобы закрыть окно");
+            this.button_OK_SNI.UseVisualStyleBackColor = false;
+            this.button_OK_SNI.Click += new System.EventHandler(this.button_OK_SNI_Click);
+            // 
             // button_doctor_3_SNI
             // 
             this.button_doctor_3_SNI.Location = new System.Drawing.Point(357, 154);
@@ -291,104 +389,6 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             this.label8.Size = new System.Drawing.Size(529, 20);
             this.label8.TabIndex = 14;
             this.label8.Text = "Для какого врача хотите обновить данные пациентов?";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(492, 117);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(149, 40);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Амбулаторное \r\nлечение";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(490, 168);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(182, 40);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Срок потери \r\nтрудоспособности";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(490, 234);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(180, 40);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "На диспансерном \r\nучете";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(492, 303);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(124, 20);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Примечание";
-            // 
-            // textBox_Outpatient_SNI
-            // 
-            this.textBox_Outpatient_SNI.Location = new System.Drawing.Point(696, 135);
-            this.textBox_Outpatient_SNI.Name = "textBox_Outpatient_SNI";
-            this.textBox_Outpatient_SNI.Size = new System.Drawing.Size(287, 22);
-            this.textBox_Outpatient_SNI.TabIndex = 17;
-            // 
-            // textBox_loss_SNI
-            // 
-            this.textBox_loss_SNI.Location = new System.Drawing.Point(696, 186);
-            this.textBox_loss_SNI.Name = "textBox_loss_SNI";
-            this.textBox_loss_SNI.Size = new System.Drawing.Size(287, 22);
-            this.textBox_loss_SNI.TabIndex = 18;
-            // 
-            // textBox_accounting_SNI
-            // 
-            this.textBox_accounting_SNI.Location = new System.Drawing.Point(696, 252);
-            this.textBox_accounting_SNI.Name = "textBox_accounting_SNI";
-            this.textBox_accounting_SNI.Size = new System.Drawing.Size(287, 22);
-            this.textBox_accounting_SNI.TabIndex = 19;
-            // 
-            // textBox_note_SNI
-            // 
-            this.textBox_note_SNI.Location = new System.Drawing.Point(632, 303);
-            this.textBox_note_SNI.Multiline = true;
-            this.textBox_note_SNI.Name = "textBox_note_SNI";
-            this.textBox_note_SNI.Size = new System.Drawing.Size(379, 110);
-            this.textBox_note_SNI.TabIndex = 20;
-            // 
-            // button_OK_SNI
-            // 
-            this.button_OK_SNI.BackColor = System.Drawing.Color.Lime;
-            this.button_OK_SNI.Location = new System.Drawing.Point(696, 154);
-            this.button_OK_SNI.Name = "button_OK_SNI";
-            this.button_OK_SNI.Size = new System.Drawing.Size(259, 36);
-            this.button_OK_SNI.TabIndex = 19;
-            this.button_OK_SNI.Text = "ОК";
-            this.toolTip1.SetToolTip(this.button_OK_SNI, "Нажмите чтобы закрыть окно");
-            this.button_OK_SNI.UseVisualStyleBackColor = false;
-            this.button_OK_SNI.Click += new System.EventHandler(this.button_OK_SNI_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(490, 71);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(192, 20);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Поставьте прочерк";
-            // 
-            // textBox_proh_SNI
-            // 
-            this.textBox_proh_SNI.Location = new System.Drawing.Point(696, 81);
-            this.textBox_proh_SNI.Name = "textBox_proh_SNI";
-            this.textBox_proh_SNI.Size = new System.Drawing.Size(287, 22);
-            this.textBox_proh_SNI.TabIndex = 22;
             // 
             // FormPatients
             // 

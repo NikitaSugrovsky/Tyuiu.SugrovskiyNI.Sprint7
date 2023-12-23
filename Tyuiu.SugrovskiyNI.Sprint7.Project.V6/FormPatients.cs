@@ -33,6 +33,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             string accounting = textBox_accounting_SNI.Text;
             string note = textBox_note_SNI.Text;
             string proh = textBox_proh_SNI.Text;
+            
 
             string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number},{proh}, {Outpatient}, {loss}, {accounting}, {note}";
 
@@ -77,6 +78,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             string accounting = textBox_accounting_SNI.Text;
             string note = textBox_note_SNI.Text;
             string proh = textBox_proh_SNI.Text;
+
 
             string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number},{proh}, {Outpatient}, {loss}, {accounting}, {note}";
 
@@ -123,6 +125,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             string note = textBox_note_SNI.Text;
             string proh = textBox_proh_SNI.Text;
 
+
             string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number},{proh}, {Outpatient}, {loss}, {accounting}, {note}";
 
             try
@@ -167,6 +170,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             string note = textBox_note_SNI.Text;
             string proh = textBox_proh_SNI.Text;
 
+
             string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number},{proh}, {Outpatient}, {loss}, {accounting}, {note}";
 
             try
@@ -210,6 +214,7 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
             string accounting = textBox_accounting_SNI.Text;
             string note = textBox_note_SNI.Text;
             string proh = textBox_proh_SNI.Text;
+
 
             string DataToSave = $"{Number};{Surname};{Name};{Patron};{date};{phone_number},{proh}, {Outpatient}, {loss}, {accounting}, {note}";
 

@@ -74,13 +74,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                         }
                     }
 
-
+                    // Привязка данных к DataGridView
                     BindingSource bindingSource = new BindingSource();
                     bindingSource.DataSource = dataTable;
 
                     dataGridView_SNI.DataSource = bindingSource;
 
-
+                    // Отключаем сортировку для каждой колонки
                     foreach (DataGridViewColumn column in dataGridView_SNI.Columns)
                     {
                         column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -175,13 +175,13 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
                         }
                     }
 
-                    // Привязка данных к DataGridView
+
                     BindingSource bindingSource = new BindingSource();
                     bindingSource.DataSource = dataTable;
 
                     dataGridView_SNI.DataSource = bindingSource;
 
-                    // Отключаем сортировку для каждой колонки
+
                     foreach (DataGridViewColumn column in dataGridView_SNI.Columns)
                     {
                         column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -537,11 +537,18 @@ namespace Tyuiu.SugrovskiyNI.Sprint7.Project.V6
         private void button_Line_SNI_Click(object sender, EventArgs e)
         {
             string filePath = @"C:\Users\Admin\source\repos\Tyuiu.SugrovskiyNI.Sprint7\Tyuiu.SugrovskiyNI.Sprint7.Project.V6\bin\Debug\OutputFile_5.csv";
-            int columnIndex = 0;
+            int columnIndex = 8;
 
             List<double> data = ds.GetDataForColumn(filePath, columnIndex);
-            FormChar FormChar = new FormChar();
-            FormChar.ShowDialog();
+
+            // Создайте экземпляр FormChar
+            FormChar formChar = new FormChar();
+
+            // Передайте данные в FormChar и обновите график
+            formChar.UpdateChart(data);
+
+            // Отобразите FormChar
+            formChar.ShowDialog();
         }
     }
 }
